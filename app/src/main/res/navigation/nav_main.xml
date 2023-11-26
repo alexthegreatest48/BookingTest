@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/hotelFragment">
+
+    <fragment
+        android:id="@+id/hotelFragment"
+        android:name="ru.effective.booking.activity.HotelFragment"
+        android:label="hotel_fragment"
+        tools:layout="@layout/hotel_card">
+
+        <action
+            android:id="@+id/action_hotelFragment_to_roomFragment"
+            app:destination="@id/roomFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/roomFragment"
+        android:name="ru.effective.booking.activity.RoomFragment"
+        android:label="room_fragment"
+        tools:layout="@layout/room_fragment">
+
+        <action
+            android:id="@+id/action_roomFragment_to_bookFragment"
+            app:destination="@id/bookFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/bookFragment"
+        android:name="ru.effective.booking.activity.BookFragment"
+        android:label="book_fragment"
+        tools:layout="@layout/book_card">
+
+        <action
+            android:id="@+id/action_bookFragment_to_finFragment"
+            app:destination="@id/finFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/finFragment"
+        android:name="ru.effective.booking.activity.FinFragment"
+        android:label="fin_fragment"
+        tools:layout="@layout/fin_card">
+
+        <action
+            android:id="@+id/action_finFragment_to_hotelFragment"
+            app:destination="@id/hotelFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out"
+            />
+    </fragment>
+
+
+
+
+
+
+</navigation>

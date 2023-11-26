@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/rating"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:drawableStart="@drawable/baseline_star_border_24"
+            android:text="5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@color/orange" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            app:layout_constraintTop_toBottomOf="@id/rating"
+            android:fontFamily="sans-serif-black"
+            tools:text="@sample/hotel.json/data/name" />
+
+        <TextView
+            android:id="@+id/adress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            app:layout_constraintTop_toBottomOf="@id/name"
+            tools:text="@sample/hotel.json/data/adress" />
+
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrierTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="name, adress" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/infoBarrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="right"
+            app:constraint_referenced_ids="arrivalH,departureH" />
+
+        <TextView
+            android:id="@+id/departureH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/barrierTop"
+            app:layout_constraintStart_toStartOf="@id/adress"
+            android:text="@string/departureH" />
+
+        <TextView
+            android:id="@+id/departure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            app:layout_constraintStart_toEndOf="@id/infoBarrier"
+            app:layout_constraintTop_toTopOf="@id/departureH"
+            tools:text="@sample/book.json/data/departure" />
+
+        <TextView
+            android:id="@+id/arrivalH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/departureH"
+            app:layout_constraintStart_toStartOf="@id/departureH"
+            android:text="@string/arrivalH" />
+
+        <TextView
+            android:id="@+id/arrival"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/departure"
+            app:layout_constraintTop_toTopOf="@id/arrivalH"
+            tools:text="@sample/book.json/data/arrival_country" />
+
+        <TextView
+            android:id="@+id/dateH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/arrivalH"
+            app:layout_constraintStart_toStartOf="@id/departureH"
+            android:text="@string/dateH" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/departure"
+            app:layout_constraintTop_toTopOf="@id/dateH"
+            tools:text="@sample/book.json/data/tour_date_start" />
+
+        <TextView
+            android:id="@+id/nightH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/dateH"
+            app:layout_constraintStart_toStartOf="@id/departureH"
+            android:text="@string/nightH" />
+
+        <TextView
+            android:id="@+id/night"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/departure"
+            app:layout_constraintTop_toTopOf="@id/nightH"
+            tools:text="@sample/book.json/data/number_of_nights" />
+
+        <TextView
+            android:id="@+id/hotelH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/nightH"
+            app:layout_constraintStart_toStartOf="@id/departureH"
+            android:text="@string/hotelH" />
+
+        <TextView
+            android:id="@+id/hotel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/departure"
+            app:layout_constraintTop_toTopOf="@id/hotelH"
+            tools:text="@sample/book.json/data/hotel_name" />
+
+        <TextView
+            android:id="@+id/roomH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/hotelH"
+            app:layout_constraintStart_toStartOf="@id/departureH"
+            android:text="@string/roomH" />
+
+        <TextView
+            android:id="@+id/room"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/departure"
+            app:layout_constraintTop_toTopOf="@id/roomH"
+            tools:text="@sample/book.json/data/room" />
+
+        <TextView
+            android:id="@+id/foodH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/roomH"
+            app:layout_constraintStart_toStartOf="@id/departureH"
+            android:text="@string/foodH" />
+
+        <TextView
+            android:id="@+id/food"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/departure"
+            app:layout_constraintTop_toTopOf="@id/foodH"
+            tools:text="@sample/book.json/data/nutrition" />
+
+        <TextView
+            android:id="@+id/infoMail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="@id/foodH"
+            app:layout_constraintTop_toBottomOf="@id/foodH"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="@string/infoMail" />
+
+        <EditText
+            android:id="@+id/phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:inputType="phone"
+            app:layout_constraintStart_toStartOf="@id/infoMail"
+            app:layout_constraintTop_toBottomOf="@id/infoMail"
+            android:hint="@string/phone"
+            android:autofillHints="+7(***)***-**-**" />
+
+        <EditText
+            android:id="@+id/mail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:inputType="textEmailAddress"
+            app:layout_constraintStart_toStartOf="@id/phone"
+            app:layout_constraintTop_toBottomOf="@id/phone"
+            android:hint="@string/mail"
+            android:autofillHints="example@mail.ru" />
+
+        <TextView
+            android:id="@+id/tourist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="@id/infoMail"
+            app:layout_constraintTop_toBottomOf="@id/mail"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="@string/tourist" />
+
+        <EditText
+            android:id="@+id/nameT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="@id/tourist"
+            app:layout_constraintTop_toBottomOf="@id/tourist"
+            android:hint="@string/name" />
+
+        <EditText
+            android:id="@+id/surname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/nameT"
+            app:layout_constraintTop_toBottomOf="@id/nameT"
+            android:hint="@string/surname" />
+
+        <EditText
+            android:id="@+id/dateBirth"
+            android:inputType="date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/surname"
+            app:layout_constraintTop_toBottomOf="@id/surname"
+            android:hint="@string/dateB" />
+
+        <EditText
+            android:id="@+id/countryPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/dateBirth"
+            app:layout_constraintTop_toBottomOf="@id/dateBirth"
+            android:hint="@string/countryPass" />
+
+        <EditText
+            android:id="@+id/passNum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/countryPass"
+            app:layout_constraintTop_toBottomOf="@id/countryPass"
+            android:hint="@string/passNum" />
+
+        <EditText
+            android:id="@+id/datePass"
+            android:inputType="date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/passNum"
+            app:layout_constraintTop_toBottomOf="@id/passNum"
+            android:hint="@string/datePass" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/fab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/pay"
+            android:background="@color/blue"
+            app:layout_constraintTop_toBottomOf="@id/datePass"
+            android:textColor="@color/white" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

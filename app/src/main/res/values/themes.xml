@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.Booking" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="colorAccent">@color/bluetrans</item>
+    </style>
+
+    <style name="systemButtonStyle" parent="Widget.MaterialComponents.Button">
+        <item name="android:background">@drawable/roundedbutton</item>
+    </style>
+
+
+</resources>

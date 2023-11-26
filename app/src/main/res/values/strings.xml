@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Booking</string>
+    <string name="price_text">за тур с перелетом</string>
+    <string name="hotel_text">Об отеле</string>
+    <string name="fbutt">Удобства</string>
+    <string name="sbutt">Что включено</string>
+    <string name="tbutt">Что не включено</string>
+    <string name="room">К выбору номера</string>
+    <string name="roomadd"><![CDATA[Подробнее о номере >]]></string>
+    <string name="choose">Выбрать номер</string>
+    <string name="departureH">Вылет из</string>
+    <string name="arrivalH">Страна, город</string>
+    <string name="dateH">Даты</string>
+    <string name="nightH">Кол-во ночей</string>
+    <string name="hotelH">Отель</string>
+    <string name="roomH">Номер</string>
+    <string name="foodH">Питание</string>
+    <string name="infoMail">Информация о покупателе</string>
+    <string name="phone">Номер телефона</string>
+    <string name="mail">Электронная почта</string>
+    <string name="tourist">Информация о туристе</string>
+    <string name="name">Имя</string>
+    <string name="surname">Фамилия</string>
+    <string name="dateB">Дата рождения</string>
+    <string name="countryPass">Гражданство</string>
+    <string name="passNum">Номер паспорта</string>
+    <string name="datePass">Дата паспорта</string>
+    <string name="pay">Оплатить</string>
+    <string name="orderHeader">Ваш заказ принят в работу</string>
+    <string name="order">Подтверждение заказа №104893 может занять некоторое время (от 1 часа до суток). Как только мы получим ответ от туроператора, вам на почту придет уведомление.</string>
+</resources>
