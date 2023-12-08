@@ -27,7 +27,7 @@ class RoomViewHolder(
 
     fun bind(room: Room) {
         binding.apply {
-            photo.load(room.image)
+            photo.load(room.image.toString())
             name.text = room.name
             price.text = room.price.toString()
             pricePer.text = room.pricePer

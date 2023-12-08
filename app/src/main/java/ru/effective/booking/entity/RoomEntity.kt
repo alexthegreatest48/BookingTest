@@ -11,8 +11,8 @@ data class RoomEntity(
     val name: String,
     val price: Int,
     val pricePer: String,
-    val peculiarities: String,
-    val image: String
+    val peculiarities: List<String>,
+    val image: List<String>
 ) {
     fun toDto() = Room(id, name, price, pricePer, peculiarities, image)
 

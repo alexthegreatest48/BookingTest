@@ -4,7 +4,9 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
+import androidx.room.TypeConverter
 import kotlinx.coroutines.flow.Flow
+import ru.effective.booking.dto.About
 import ru.effective.booking.entity.HotelEntity
 
 @Dao
@@ -15,3 +17,4 @@ interface HotelDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insert(hotel: HotelEntity)
 }
+

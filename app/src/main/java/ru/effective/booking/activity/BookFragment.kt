@@ -37,6 +37,18 @@ class BookFragment: Fragment() {
         }
 
         viewModel.data.observe(viewLifecycleOwner) { state ->
+            with(binding){
+                rating.text = state.book[0].rating.toString()
+                name.text = state.book[0].name
+                adress.text = state.book[0].adress
+                departure.text = state.book[0].departure
+                arrival.text = state.book[0].arrivalCountry
+                date.text = state.book[0].dateStart + '-' + state.book[0].dateEnd
+                night.text = state.book[0].nights.toString()
+                hotel.text = state.book[0].name
+                room.text = state.book[0].room
+                food.text = state.book[0].nutrition
+            }
             adapter.submitList(state.book)
         }
 

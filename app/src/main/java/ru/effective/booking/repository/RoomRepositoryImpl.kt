@@ -5,6 +5,8 @@ import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.map
 import ru.effective.booking.api.Api
 import ru.effective.booking.dao.RoomDao
+import ru.effective.booking.dto.Room
+import ru.effective.booking.dto.RoomList
 import ru.effective.booking.entity.RoomEntity
 import ru.effective.booking.entity.toDto
 import ru.effective.booking.entity.toEntity
@@ -18,6 +20,7 @@ class RoomRepositoryImpl(private val dao: RoomDao) : RoomRepository {
         val response = Api.service.getRoom()
 
         val body = response.body()
-        dao.insert(body!!.toEntity())
+        dao.insert(body!!.list.toEntity())
     }
 }
+

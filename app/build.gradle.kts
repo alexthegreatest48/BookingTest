@@ -95,4 +95,5 @@ dependencies {
     implementation ("com.google.firebase:firebase-messaging-ktx:23.3.1")
     implementation ("com.google.android.gms:play-services-base:18.2.0")
     implementation ("com.github.bumptech.glide:glide:4.16.0")
+    implementation ("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.0")
 }
